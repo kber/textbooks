@@ -199,3 +199,17 @@ twin-primes:
   text: __孪生素数__ 是像17和19一样的成对素数, 它们正好相隔两个数。仍然不知道
     是否有无穷多对双素数。
   link: /course/divisibility/the-distribution-of-primes#twin-primes
+
+circle:
+  title: 圆
+  text: __圆__ 是在同一平面内到定点 (_圆心_) 的距离等于定长 (半径) 的点的集合
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+compass:
+  title: 圆规
+  text: 圆规是用来绘制圆和弧的工具，它由两部分组成 - 其中一只脚的末端为针尖，作为圆心，另一只脚通常可装上铅笔来画出弧线
+
+similar:
+  title: 相似
+  text: 如果两个几何图形形状相同，但是大小不一定相同，那么这两个图形 __相似__。我们可以通过移动、旋转、映射和缩放让一个图形去和另外一个图形匹配起来，它们对应的边和角度的比例都是一定的。
