@@ -84,8 +84,8 @@ integer:
 
 irrational-numbers:
   title: 无理数
-  text: __无理数__是不能表示为整数分数(_有理数_)的数。例如，0.333333…=`1/3`是
-    _有理性_的，但`π`、`sqrt(2)`和_e_都是_无理性_的。
+  text: __无理数__是不能表示为整数分数（ _有理数_ ）的数。例如，0.333333…=`1/3`是 _有理数_ ，
+    但`π`、`sqrt(2)`和 _e_ 都是 _无理数_ 。
 
 pascals-triangle:
   title: 帕斯卡三角
@@ -101,7 +101,7 @@ perfect-numbers:
 
 pi:
   title: 圆周率
-  text: __圆周率___, 通常希腊字母 _π_ 的写法表示，它是圆周和圆直径的比值。
+  text: __圆周率__, 通常希腊字母 _π_ 的写法表示，它是圆周和圆直径的比值。
     其值约为3.14159265…
   link: /course/circles/introduction#pi-definition
 
@@ -213,3 +213,47 @@ compass:
 similar:
   title: 相似
   text: 如果两个几何图形形状相同，但是大小不一定相同，那么这两个图形 __相似__。我们可以通过移动、旋转、映射和缩放让一个图形去和另外一个图形匹配起来，它们对应的边和角度的比例都是一定的。
+
+circle-circumference:
+  title: 圆的周长 
+  text: 圆的 __周长__ 就是绕圆的外边缘一周的长度。半径为 _r_ 的圆的周长计算公式为 `C = 2 pi r`.
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: 直径 （圆）
+  text: 圆的 __直径__ 是指通过圆心到圆的边上两点之间的距离
+  link: /course/circles/introduction#radius
+
+translation:
+  title: 平移
+  text: __平移__ 是指不改变图形的形状和大小的情况下，将图形沿着某个直线方向移动一定距离的移动。
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
+dilation:
+  title: 伸缩 
+  text: __伸缩__ 是指将几何图形的形状放大或缩小的一种变换
+  image: dilation.svg
+  link: /course/transformations/dilations
+
+degrees:
+  title: 度
+  text: __度__ 是角的度量单位之一，符号为°。
+    周角的度为 360°, 直角的度数为 90°, 以此类推。
+
+base-10:
+  title: 十进制
+  text: __十进制__ (或 __Base10__) 是世界上应用最广泛的进位制，使用 0 到 9 十个数字来表示。
+
+unit-circle:
+  title: 单位圆
+  text: __单位圆__ 就是半径为 1 的圆。
+
+radians:
+  title: 弧度
+  text: __弧度__ 是一种度量角度大小的单位。 一整圈（360°）为 `2π` 弧度 - 一个单位圆的周长
+  link: /course/circles/radians#radians
+
+iss:
+  title: 国际空间站
+  text: __国际空间站__ (ISS) 于 1998 年发射升空，运行轨道距离地面高度约 400 公里。它是地球近地轨道上最大的人造天体，可以支持人在地球轨道长期驻留。人们可以通过肉眼在地球上看到。

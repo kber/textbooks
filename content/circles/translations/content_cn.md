@@ -24,7 +24,7 @@
 > id: radius
 > goals: compass
 
-所有在 [__圆__](gloss:circle) 的点到圆心的距离都是相等的。使用 [圆规](gloss:compass) 我们很轻松地就可以画出圆:
+所有在 [__圆__](gloss:circle) 上的点到圆心的距离都是相等的。使用 [圆规](gloss:compass) 我们很轻松地就可以画出圆:
 
 ::: column(width=320)
 
@@ -40,7 +40,7 @@
 
 ::: column.grow
 
-{.reveal(when="compass")} 关于圆，有 3 个关键点：
+{.reveal(when="compass")} 关于圆，有 3 个要点：
 
 * {.reveal(when="compass" delay="1000")} [{.step-target.pill.b.red}半径](target:r)
   是指圆心到圆周的距离
@@ -55,7 +55,7 @@
 > id: similar
 > goals: circle-0 circle-1 circle-2
 
-圆还有一个很重的特性，所有的圆形都 [相似](gloss:similar) ，只需通过简单的 [平移](gloss:translation) 和 [缩放](gloss:dilation) 就可以证明:
+圆还有一个很重的特性，所有的圆形都 [相似](gloss:similar) ，只需通过简单的 [平移](gloss:translation) 和 [伸缩](gloss:dilation) 就可以证明:
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
@@ -63,14 +63,8 @@
 > id: pi-definition
 > goals: digits
 
-在相似多边形中，对应边的比值是一定的。对于圆来说也是成立的：所有圆的 [周长](gloss:circle-circumference) 和 [直径](gloss:circle-diameter) 的比值也是一定的
-You might remember that, for similar polygons, the ratio between corresponding
-sides is always constant. Something similar works for circles: the ratio between
-the  and the
-[diameter](gloss:circle-diameter) is equal for _all circles_. It is always
-3.14159… – a mysterious number called [__Pi__](gloss:pi), which is often written
-as the Greek letter _π_ for “p”. Pi has infinitely many decimal digits that go
-on forever without any specific pattern:
+在相似多边形中，对应边的比值总是一定的。对于圆来说也是成立的：_所有圆_ 的 [周长](gloss:circle-circumference) 和 [直径](gloss:circle-diameter) 的比值也是一定的，
+而且始终为一个常数：3.14159…，我们称之为 [__Pi__](gloss:pi)，一般用希腊字母 _π_ 来表示，它是一个无限不循环小数：
 
     canvas.pi-spiral(width=800 height=760)
 
@@ -78,8 +72,7 @@ on forever without any specific pattern:
 > id: wheel
 > goals: unroll
 
-Here is a wheel with diameter 1. As you “unroll” the circumference, you can see
-that its length is exactly [[`pi`|`2 * pi`|3]]:
+下面有一个直径为 1 的车轮，让我们来展开圆的周长，你会发现它的长度等于 [[`pi`|`2 * pi`|3]] :
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
@@ -87,52 +80,49 @@ that its length is exactly [[`pi`|`2 * pi`|3]]:
 ---
 > id: circumference
 
-For a circle with diameter _d_, the circumference is `C = π × d`. Similarly,
-for a circle with [radius](gloss:circle-radius) _r_, the circumference is
+如果圆的直径为 _d_ ，那么它的周长为 `C = π × d`. 同理,
+一个 [半径](gloss:circle-radius) 为 _r_ 的圆, 它的周长为
 
 {.text-center} `C =` [[`2 π r`|`π r`|`π r^2`]].
 
 ---
 > id: nature
 
-Circles are perfectly symmetric, and they don’t have any “weak points” like the
-corners of a polygon. This is one of the reasons why they can be found
-everywhere in nature:
+圆是完全对称的，并且没有多边形的角等任何“弱点”。 这就是为什么它们在自然界中随处可见的原因之一: 
 
 ::: column(width=130 parent="padded-thin")
 
     x-media(src="images/flower.jpg" width=130 height=130)
 
-{.caption} Flowers
+{.caption} 花朵
 
 ::: column(width=130)
 
     x-media(src="images/earth.jpg" width=130 height=130)
 
-{.caption} Planets
+{.caption} 地球
 
 ::: column(width=130)
 
     x-media(src="images/tree.jpg" width=130 height=130)
 
-{.caption} Trees
+{.caption} 圆木
 
 ::: column(width=130)
 
     x-media(src="images/orange.jpg" width=130 height=130)
 
-{.caption} Fruit
+{.caption} 水果
 
 ::: column(width=130)
 
     x-media(src="images/soap.jpg" width=130 height=130)
 
-{.caption} Soap Bubbles
+{.caption} 肥皂泡
 
 :::
 
-{.r} And there are so many other examples: from rainbows to water ripples. Can
-you think of anything else? [Continue](btn:next)
+{.r} 而且这样的例子从彩虹到水波纹无处不在，你还能想到其他的例子吗？[继续](btn:next)
 
 ---
 > id: max-area
@@ -140,24 +130,20 @@ you think of anything else? [Continue](btn:next)
 
 ::: column.grow
 
-It also turns out that a circle is the shape with the largest area for a given
-circumference. For example, if you have a rope of length 100\ m, you can use
-it to enclose the largest space if you form a circle (rather than other shapes
-like a rectangle or triangle).
+在周长一定的条件下，圆的面积是最大的。举个例子，用一条 100 米长的绳子来圈地，只有将绳子围成圆形（而不是正方形或者三角形）才能使圈地的面积最大
 
-In nature, objects like water drops or air bubbles can _save energy_ by becoming
-circular or spherical, and reducing their surface area.
+在自然界中，水滴或气泡可以通过变为圆形或者球形来 _保存能量_ ，并且可以减小它们的表面积。
 
 ::: column(width=320)
 
     x-select.area-tabs
-      div(data-value="0") Triangle
-      div(data-value="1") Square
-      div(data-value="2") Pentagon
-      div(data-value="3") Circle
+      div(data-value="0") 三角形
+      div(data-value="1") 正方形
+      div(data-value="2") 五边形
+      div(data-value="3") 圆形
     svg(width=320 height=200)
 
-{.caption} _Circumference_ = __{.m-green}100__, _Area_ = __${area}__
+{.caption} _周长_ = __{.m-green}100__, _面积_ = __${area}__
 
 
 :::
@@ -166,15 +152,12 @@ circular or spherical, and reducing their surface area.
 > id: area
 > goals: slider
 
-### The Area of a Circle
+### 圆的面积
 
-But how do we actually calculate the area of a circle? Let’s try the same
-technique we used for [finding the area quadrilaterals](/course/polyhedra/quadrilaterals):
-we cut the shape into multiple different parts, and then rearrange them into a
-different shape we already know the area of (e.g. a rectangle or a triangle).
+但是如何才能计算出圆的面积呢？我们可以使用和 [找出四边形的面积](/course/polyhedra/quadrilaterals) 一样的方法：
+将图形分别切割成很多不同的部分，然后将他们重新拼接成一个我们已知面积计算方式的图形（比如：矩形或者三角形）
 
-The only difference is that, because circles are curved, we have to use some
-approximations:
+唯一的不同地方是，因为圆是弯曲的，因此我们必须做一些近似处理：
 
 ::: column(width=340)
 
@@ -191,21 +174,16 @@ approximations:
 
 ::: column.grow
 
-Here you can see a circle divided into ${toWord(n1)} wedges. Move the slider,
-to line up the wedges in one row.
+这里可以将圆分割成 ${n1} 个楔形，向右移动滑动条，将它们重新排列成一行。
 
-{.reveal(when="slider")} If we increase the number of wedges to ${n1}{n1|6|6,30,2},
-this shape starts to look more and more like a [[rectangle|circle|square]].
+{.reveal(when="slider")} 如果我们将分割的楔形的数量逐渐增加 ${n1}{n1|6|6,30,2},
+你会发现重新排列后的图形越来越接近 [[矩形|圆形|正方形]].
 
-{.reveal(when="blank-0")} The height of the rectangle is equal to the
-[[radius|circumference|diameter]] of the circle.
-_{span.reveal(when="blank-1")} The width of the rectangle is equal to
-[[half the circumference|the circumference|twice the radius]] of the circle._
-_{span.reveal(when="blank-2")} (Notice how half of the wedges face down and
-half of them face up.)_
+{.reveal(when="blank-0")} 矩形的高等于圆的 [[半径|周长|直径]]。
+_{span.reveal(when="blank-1")} 矩形的宽等于圆的 [[周长的一半|周长|直径]]_
+_{span.reveal(when="blank-2")} (一半的楔形朝下，另一半朝上)_
 
-{.reveal(when="blank-2" delay=1000)} Therefore the total area of the rectangle
-is approximately `A = π r^2`.
+{.reveal(when="blank-2" delay=1000)} 因此这个矩形的面积的近似值为 `A = π r^2`.
 
 :::
 
@@ -225,28 +203,23 @@ is approximately `A = π r^2`.
 
 ::: column.grow
 
-Here you can see a circle divided into ${toWord(n)} rings. Like before, you can
-move the slider to “uncurl” the rings.
+我们还可以将圆分割成 ${n} 个圆环。跟刚才一样，向右移动滑动条，将所有的圆环拉直平铺。
 
-{.reveal(when="slider")} If we increase the number of wedges to ${n2}{n2|4|2,12,1},
-this shape starts to look more and more like a [[triangle|rectangle|trapezium]].
+{.reveal(when="slider")} 如果我们将分割的楔形数量逐渐增加 ${n2}{n2|4|2,12,1},
+你会发现重新排列后的图形越来越接近 [[三角形|矩形|梯形]].
 
-{.reveal(when="blank-0")} The height of the triangle is equal to the 
-[[radius|diameter|circumference]] of the circle.
-_{span.reveal(when="blank-1")} The base of the triangle is equal to [[the
-circumference|twice the diameter]] of the circle._
-_{span.reveal(when="blank-2")} Therefore the total area of the triangle is
-approximately_
+{.reveal(when="blank-0")} 三角形的高等于圆的 [[半径|直径|周长]] 。
+_{span.reveal(when="blank-1")} 三角形的底等于圆的 [[周长|直径的两倍]]._
+_{span.reveal(when="blank-2")} 因此三角形的面积近似等于_
 
-{.text-center.reveal(when="blank-2")} `A = 1/2 "base" × "height" = π r^2`.
+{.text-center.reveal(when="blank-2")} `A = 1/2 "底" × "高" = π r^2`.
 
 :::
 
 ---
 > id: area-2
 
-If we could use infinitely many rings or wedges, the approximations above would
-be perfect – and they both give us the same formula for the area of a circle:
+如果可以使用无限多个环或楔形，我们就能完美的计算出圆的面积-以上两种计算圆的面积方式得出了相同的面积计算公式：
 
 {.text-center.r} `A = π r^2`.
 [Continue](btn:next)
@@ -254,18 +227,14 @@ be perfect – and they both give us the same formula for the area of a circle:
 ---
 > id: pi-approximations
 
-### Calculating Pi
+### 计算圆周率 Pi 的值
 
-As you saw above, `π = 3.1415926…` is not a simple integer, and its decimal
-digits go on forever, without any repeating pattern. Numbers with this property
-are called [__irrational numbers__](gloss:irrational-numbers), and it means that
-`π` cannot be expressed as a simple fraction `a/b`.
+正如你所看到的，`π = 3.1415926…` 不是整数，而是一个无限不循环小数。这样的数字被称为
+[__无理数__](gloss:irrational-numbers), 也就是说 `π` 不能表示成一个简单的分数的形式。
 
-It also means that we can never write down _all_ the digits of Pi – after all,
-there are infinitely many. Ancient Greek and Chinese mathematicians calculated
-the first four decimal digits of Pi by approximating circles using regular
-polygons. Notice how, as you add more sides, the polygon starts to look
-[[more and more|less|exactly]] like a circle:
+同时也意味着我们永远都无法写下 Pi 的所有的数字 - 毕竟它们有无穷的位数。
+古希腊和古代中国的数学家通过正多边形将 Pi 的值计算到了小数点后 4 位。
+注意他们是如何计算的，随着边数的增加，这些多边形看起来 [[越来越像|越来越不像|完全就是]] 一个圆：
 
     figure: x-media(src="images/polygons.svg" width=460 height=110)
 
@@ -278,30 +247,22 @@ polygons. Notice how, as you add more sides, the polygon starts to look
 
 ::: column.grow
 
-In 1665, [Isaac Newton](bio:newton) managed to calculate 15 digits. Today, we
-can use powerful computers to calculate the value of Pi to much higher
-accuracy.
+1665 年，[牛顿](bio:newton) 将圆周率计算到了小数点后 15 位。 今天我们通过计算机可以计算出圆周率 Pi 小数点后更多的位数。
 
-The current record is 31.4 trillion digits. A printed book containing all these
-digits would be approximately 400\ km thick – that’s the height at which the
-[International Space Station](gloss:iss) orbits Earth!
+目前的记录是 31.4 万亿位。如果将它们全部印到一本书当中，那么这本书的厚度大约是 400 公里 - 这是 [国际空间站](gloss:iss) 环绕地球运行的高度
 
-Of course, you don’t need to remember that many digits of Pi. In fact, the
-fraction `22/7 = 3.142…` is a great approximation.
+当然我们不用去记住 Pi 的所有数位。事实上，分数 `22/7 = 3.142…` 已经和 Pi 的值非常接近了。
 
 :::
 
 ---
 > id: pi-sequence
 
-One approach for calculating Pi is using infinite sequences of numbers. Here is
-one example which was discovered by [Gottfried Wilhelm Leibniz](bio:leibniz) in
-1676:
+另一种计算 Pi 的方式是使用无穷级数。下面计算 Pi 的公式就是 [莱布尼茨](bio:leibniz) 在 1676 年发现的：
 
 {.text-center} `π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
-{.reveal(when="blank-0")} As we calculate more and more terms of this series,
-always following the same pattern, the result will get closer and closer to Pi.
+{.reveal(when="blank-0")} 只要我们遵循同样的模式，计算项越多，结果越接近 Pi 的值。
 
 ---
 > id: pi-colours
@@ -309,13 +270,10 @@ always following the same pattern, the result will get closer and closer to Pi.
 
 ::: column.grow
 
-Many mathematicians believe that Pi has an even more curious property: that it
-is a __normal number__. This means that the digits from 0 to 9 appear completely
-at random, as if nature had rolled a 10-sided dice infinitely many times, to
-determine the value of Pi.
+数学家们认为 Pi 让人更加好奇的是：它是一个 __正常数__ 。也就是说，这些从 0 到 9 的数字似乎是完全随机的，
+就好像 Pi 的值完全是大自然通过无数次掷一个 10 面骰子掷出来的。
 
-Here you can see the first 100 digits of Pi. Move over some of the cells, to see
-how the digits are distributed.
+这里我们可以看到 Pi 的前 100 位。鼠标移动到这些单元格上，看看数字是如何分布的。
 
 ::: column(width=330)
 
@@ -334,14 +292,13 @@ how the digits are distributed.
 > id: pi-digits
 > goals: search
 
-If Pi is normal, it means that you can think of _any_ string of digits, and it
-will appear somewhere in its digits. Here you can search the first one
-million digits of Pi – do they contain your birthday?
+如果 Pi 是正常的，就意味着你能想到的 _任意_ 字符数串都可能出现在其中。
+这里你可以查找 Pi 值的前 100 万位 - 包含了你的生日吗？
 
     .box
-      .box-title: h3 One Million Digits of Pi
+      .box-title: h3 Pi 的前 100 万位数字
       .box-body.pi-controls
-        | Search for a string of digits:
+        | 输入查找的数字:
         input(type="text" pattern="[0-9]*" maxlength=12)
         .pi-warning
       x-pi-scroll.box-body
@@ -350,38 +307,32 @@ million digits of Pi – do they contain your birthday?
 ---
 > id: pi-movies
 
-We could even convert an entire book, like Harry Potter, into a very long string
-of digits (a = 01, b = 02, and so on). If Pi is normal, this string will appear
-somewhere in its digits – but it would take millions of years to calculate
-enough digits to find it.
+我们甚至可以将一整本书，比如《哈利·波特》，转换为一长串数字（a = 01，b = 02，等等）。
+如果 Pi 是正常数，那么这一串数字一定会出现在 Pi 的数位中 - 只是很可能会需要花上百万年去计算出足够的位数并找到它。
 
-Pi is easy to understand, but of fundamental importance in science and
-mathematics. That might be a reason why Pi has become unusually popular in our
-culture (at least, compared to other topics of mathematics):
+Pi 容易理解，但却在科学和数学领域具有最基础的重要性。这可能也是为什么 Pi 在我们的文化中异常流行的原因（至少与其他数学主题相比）:
 
 ::: column(width=220 parent="padded-thin")
 
     x-video(src="images/museum.mp4" poster="images/museum.jpg" width=220 height=140 audio credit="© 20th Century Fox")
-    p.caption Pi is the secret combination for the tablet in “Night at the Museum 2”.
+    p.caption 在电影 “博物馆惊魂夜2” 中，Pi 是书写板的密码.
 
 ::: column(width=220)
 
     x-video(src="images/simpsons.mp4" poster="images/simpsons.jpg" width=220 height=140 audio credit="© Fox")
-    p.caption Professor Frink (“Simpsons”) silences a room of scientists by saying that Pi equals 3.
+    p.caption 在“辛普森一家”中，弗林克宣称 `pi` 等于 3 ，让满屋子的科学家瞬间安静
 
 ::: column(width=220)
 
     x-video(src="images/star-trek.mp4" poster="images/star-trek.jpg" width=220 height=140 audio credit="© NBC")
-    p.caption Spock (“Star Trek”) disables an evil computer by asking it to calculate the last digit of Pi.
+    p.caption 史波克 (“星际迷航”) 通过让其计算 `pi` 的最后一位成功地关闭了一台邪恶的电脑
 
 :::
 
 ---
 > id: pi-day
 
-There even is a _Pi day_
-every year, which either falls on 14 March, because `pi ≈ 3.14`, or on 22 July,
-because `pi ≈ 22/7`.
+__圆周率日__ 是一年一度庆祝数学常数 `pi` 的日子 ，日期是每年的 3 月 14 日，因为 `pi ≈ 3.14`，也有另一种说法是 7 月 22 日—`pi ≈ 22/7`
 
     figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
@@ -391,14 +342,14 @@ because `pi ≈ 22/7`.
 
 
 
-## Degrees and Radians
+## 度和弧度
 
 > section: radians
 > id: degrees
 
-So far in geometry, we've always measured angles in [degrees](gloss:degrees). A
-__{.m-red}full circle__ rotation is [[360]]°, a __{.m-green}half circle__ is
-[[180]]°, a __{.m-yellow}quarter circle__ is [[90]]°, and so on.
+在几何中，我们通常使用 [度](gloss:degrees) 作为角的度量单位。
+旋转一个 __{.m-red}整圆__ 的度数是 [[360]]°, 旋转一个 __{.m-green}半圆__ 的度数是
+[[180]]°, 旋转一个 __{.m-yellow}四分之一圆__ 的度数是 [[90]]°, 以此类推。
 
 ::: column(width=160)
 
@@ -435,31 +386,25 @@ __{.m-red}full circle__ rotation is [[360]]°, a __{.m-green}half circle__ is
 ---
 > id: degrees-1
 
-{.r} The number 360 is very convenient because it is divisible by so many other
-numbers: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, and so on. This means that many
-fractions of one circle are also whole numbers. But have you ever wondered
-where the number 360 comes from? [Continue](btn:next)
+{.r} 之所是 360 度是因为它容易被整除：2, 3, 4, 5, 6, 8, 9, 10, 12, 15等等。这意味着
+很多特殊的角度都是整数。但是，难道你就不想知道数字 360 的起源？[继续](btn:next)
 
 ---
 > id: babylon
 
 ::: column.grow
+无独有偶，360 度是我们今天仍在使用的最古老的数学概念之一。
+它起源并发展与于 5000 年前的古巴比伦！
 
-As it happens, 360 degrees are one of the oldest concepts in mathematics we
-still use today. They were developed in ancient Babylon, more than 5000 years
-ago!
-
-At that time, one of the most important applications of mathematics was in
-astronomy. The _sun_ determines the four seasons, which farmers have to know
-about when growing crops. Similarly, the _moon_ determines the tides, which
-was important for fishers. People also studied the stars to predict the
-future, or to communicate with gods.
+当时，天文学是数学最重要的应用领域之一。
+太阳的运动规律决定了四个季节的更替，农民们可以知道何时进行耕种。同样的，月亮决定了潮汐的涨落，而这对于渔民非常重要。
+人们还研究星象用以预测未来，或沟通众神。
 
 ::: column(width=260)
 
     x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
 
-{.caption} A Babylonian tablet for calculating `sqrt(2)`
+{.caption} 用来计算 `sqrt(2)` 的古巴比伦石板
 
 :::
 
@@ -467,10 +412,8 @@ future, or to communicate with gods.
 > id: constellations
 > goals: rotate
 
-Astronomers noticed that the constellations visible at a specific time during
-the night shifted a tiny bit every day – until, after approximately 360 days,
-they had rotated back to their starting point. And this might have been the
-reason why they divided the circle into 360 degrees.
+古代天文学家还注意到，在夜晚的特定时间可见的星座每天都发生微小的变化，直到大约 360 天后，他们才回到原来的位置。
+这或许就是他们将圆分成 360 度的原因。
 
     figure: .constellations
       .label.md Midnight on day ${day}
@@ -483,41 +426,31 @@ reason why they divided the circle into 360 degrees.
 > id: constellations-1
 > goals: video
 
-Of course, there are actually 365 days in one year (well, 365.242199 to be
-exact), but Babylonian mathematicians worked with simple sundials, and this
-approximation was perfectly adequate.
-
-It also worked well with their existing base-60 number system (since
-`6 xx 60 = 360`). This system is the reason why we still have 60 seconds in a
-minute and 60 minutes in an hour – even though most other units are measured
-in [base 10](gloss:base-10) (e.g. 10 years in a decade, or 100 years in a century).
+当然，实际上一年有 365 天（准确的说是 365.242199），但是令人叹为观止的是，
+古巴比伦的数学家们仅仅使用了最简单的日晷就测量出了这个结果！
+它也可以很好地兼容古巴比伦已经在使用的基于六十的进制系统（因为 `6 xx 60 = 360`）
+这也是为什么今天其它所有的度量单位都是基于 [十进制](gloss:base-10)（例如：1个年代 = 10 年，1个世纪 = 100 年），
+但是这个系统仍然在使用 1 小时 = 60 分钟，1 分钟 = 60 秒的原因
 
 ::: column.grow
+对于大多数人来说，已经习惯使用度为单位来描述角度：比如360°视频、滑板手转体540°，还比如某人的态度做了180°的大转弯。
 
-For many of us, measuring angles in degrees is second nature: there is 360°
-video, skateboarders can pull 540s, and someone changing their decision might
-make a 180° turn.
-
-But from a mathematical point of view, the choice of 360 is completely
-arbitrary. If we were living on Mars, a circle might have 670°, and a year on
-Jupiter even has 10,475 days.
+但是，从数学的角度来说，选择 360 完全没有任何道理的。否则，如果在火星，圆可能是670°，而在木星，一年则有 10,475 天。
 
 ::: column(width=280)
 
     x-video(src="images/skateboard.mp4" poster="images/skateboard.jpg" width=280 height=200 credit="© RIDE Channel, from YouTube")
 
-{.caption} The 540 McFlip, a 540° rotation
+{.caption} 麦克翻转, 旋转540° 
 
 :::
 
 ---
 > id: radians
 
-### Radians
-
-Rather than dividing a circle into some number of segments (like 360 degrees),
-mathematicians often prefer to measure angles using the [circumference](gloss:circle-circumference)
-of a [__unit circle__](gloss:unit-circle) (a circle with radius 1).
+### 弧度
+数学家们更喜欢使用 [__单位圆__](gloss:unit-circle)（半径为1的圆） 的 [周长](gloss:circle-circumference) 来度量角度，
+而不是将圆进行分割圆的方式（比如分割为360份）
 
 ::: column(width=280)
 
@@ -533,28 +466,25 @@ of a [__unit circle__](gloss:unit-circle) (a circle with radius 1).
 
 ::: column.grow
 
-A _{span.var-action}full circle_ has circumference
+_{span.var-action}绕圆一周_ 的长度为
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} For a _{span.var-action}half circle rotation_, the
-corresponding distance along the circumference is
+{.reveal(when="eqn-0")} 如果 _{span.var-action}绕圆半周_, 相应绕圆周的距离为
 _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} For a _{span.var-action}quarter circle rotation_, the
-distance along the circumference is
+{.reveal(when="eqn-1")} For a _{span.var-action}绕圆四分之一圆周_, 相应绕圆周的距离为
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
-{.reveal(when="eqn-2")} And so on: this way of measuring angles is called
-[__radians__](gloss:radians) (you could remember this as “radius units”).
+{.reveal(when="eqn-2")} 以此类推: 这种度量角度的方式
+[__弧度__](gloss:radians) (也可以称这种方式为 “半径单位”).
 
 :::
 
 ---
 > id: radians-conversion
 
-Every angle in degrees has an equivalent size in radians. Converting between the
-two is very easy – just like you can convert between other units like meters and
-kilometers, or Celsius and Fahrenheit:
+每一个使用角度为单位的角都可以使用对应的弧度来表示。它们之间的转换非常简单 - 
+就像千米和米、摄氏度和华氏度等其他单位之间进行转换一样：
 
 {.text-center} __{.m-red} 360°__ _{span.space}=_ __{.m-green} 2*π* rad__
 
@@ -573,37 +503,31 @@ __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} 
 ---
 > id: radians-table
 
-You can write the radians value either as a multiple of _π_, or as just a single
-decimal number. Can you fill in this table of equivalent angle sizes in degrees
-and radians?
+弧度表示为 _π_ 的倍数的形式，也可以表示为数字。你能完成下面表格中弧度和角度的转换吗？
 
-| __{.m-red}degrees__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
-| __{.m-green}radians__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+| __{.m-red}角度__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
+| __{.m-green}弧度__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
 {.table-small.grid}
 
 ---
 > id: radians-distance
 
-### Distance Travelled
+### 路程
 
-You can think of radians as the “distance traveled” along the circumference of
-a unit circle. This is particularly useful when working with objects that are
-moving on a circular path.
+弧度可以视为沿着单位圆圆周的“路程”。这在处理在圆周运动的对象时特别有用。
 
 ::: column.grow
 
-For example, the [International Space Station](gloss:iss) orbits Earth once
-every 1.5\ hours. This means its __speed of rotation__ is [[`(2 pi)/1.5`|
-`1.5/(2 pi)`|`1.5 * pi`]] radians per hour.
+比如, [国际空间站](gloss:iss) 每 1.5\ 小时绕地球一周。
+这样意味着它的 __绕行速度__ 是 [[`(2 pi)/1.5`|
+`1.5/(2 pi)`|`1.5 * pi`]] 弧度/小时.
 
-{.reveal(when="blank-0")} In a [unit circle](gloss:unit-circle), the speed of
-rotation is the same as the _actual_ speed, because the length of the
-circumference is the same as one full rotation in radians (both are `2pi`).
+{.reveal(when="blank-0")} 在[单位圆](gloss:unit-circle)中, 
+旋转的速度和 _实际_ 速度是一致的, 因为圆周的长度等于旋转一圈的弧度数 (两者都是 `2pi`).
 
-{.reveal(when="blank-0" delay=1000)} The radius of the ISS orbit is 6800\ km,
-which means that the _actual_ speed of the ISS has to be [[`(2 pi)/1.5 xx 6800`|
-`(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km
-per hour._
+{.reveal(when="blank-0" delay=1000)} 国际空间站轨道的半径为 6800\ 公里,
+也就是说国际空间站的 _实际_ 速度为 [[`(2 pi)/1.5 xx 6800`|
+`(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 公里/小时._
 
 ::: column(width=300)
 
@@ -626,19 +550,18 @@ per hour._
 ---
 > id: radians-distance-1
 
-Can you see that, in this example, radians are a much more convenient unit than
-degrees? Once we know the speed of rotation, we simply have to multiply by the
-radius to get the actual speed.
+看到了吧，在上面的例子中，弧度是不是比度更方便很多呢？ 一旦知道旋转速度，我们只需要乘以半径即可得出实际速度。
 
-Here is another example: your car has wheels with radius 0.25\ m. If you’re
-driving at a speed of 20\ m/s, the wheels of your car rotate at [[`20/0.25 =
-80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] radians per second
-_{span.reveal(when="blank-0")}(or `80/(2pi) = 13` rotations per second)._
+再来看这个计算转速的例子: 如果汽车行驶速度为 20\ m/s, 轮胎的半径是 0.25\ m. 那么轮胎的转速就是 [[`20/0.25 =
+80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] 弧度/秒
+_{span.reveal(when="blank-0")}(或者 `80/(2pi) = 13` 转/秒)._
 
 ---
 > id: radians-trig
 
-### Trigonometry
+### 三角函数
+
+对于大多数简单的几何问题，度和弧度是可以互换的 - 你可以任意选择使用其中任意一个
 
 For most simple geometry problems, degrees and radians are completely
 interchangeable – you can either pick which one you prefer, or a question

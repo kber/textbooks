@@ -7,8 +7,11 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "server": "node server/app.js --use-strict & grunt concurrent",
-    "start": "grunt && npm run server",
+    "server": "nodemon server/app.js --use-strict",
+    "watch": "grunt concurrent",
+    "grunt": "grunt textbooks",
+    "start": "npm run server",
+    "dev": "npm run grunt && npm run start",
     "test": "eslint */*.js"
   },
   "engines": {
@@ -32,6 +35,7 @@
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "marked": "0.6.2",
+    "nodemon": "^1.19.4",
     "pug": "^2.0.3",
     "rollup": "^1.1.2",
     "rollup-plugin-node-resolve": "^4.0.0",
